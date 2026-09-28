@@ -1,0 +1,133 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:#f7f7f5;color:#171717}header{background:#fff;border-bottom:1px solid #e8e8e8;position:sticky;top:0;z-index:5}.nav{max-width:1180px;margin:auto;padding:18px 24px;display:flex;align-items:center;gap:35px}.nav b{font-size:22px}.nav b span,.hero span{color:#6d4aff}.nav input{flex:1;padding:12px 16px;border:1px solid #ddd;border-radius:12px;font-size:15px}.hero{max-width:1180px;margin:30px auto;padding:70px 24px;background:#eeeefb;border-radius:24px}.hero h1{font-size:52px;line-height:1.05;margin:12px 0}.hero p:not(.pill){max-width:650px;color:#666;font-size:17px;line-height:1.6}.pill{font-size:12px;font-weight:700;letter-spacing:1px}.cats,main>section:not(.hero){max-width:1180px;margin:25px auto;padding:0 24px}.cats{display:flex;gap:10px;overflow:auto}.cats button,.back{border:1px solid #ddd;background:#fff;padding:9px 15px;border-radius:20px;cursor:pointer}.cats .active{background:#171717;color:white}.sectionHead{display:flex;align-items:center;justify-content:space-between}.sectionHead span,.muted,small{color:#777}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:#fff;border:1px solid #e7e7e7;border-radius:16px;overflow:hidden;cursor:pointer;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px #0001}.card img{width:100%;height:190px;object-fit:cover}.body{padding:14px}.body h3{font-size:16px;margin:7px 0 14px}.body div{display:flex;justify-content:space-between}.body span{color:#777;font-size:13px}.back{margin:28px 24px}.detail{max-width:1180px;display:grid;grid-template-columns:1fr 1fr;gap:45px}.detail img{width:100%;height:430px;object-fit:cover;border-radius:20px}.detail h1{font-size:42px}.detail p{line-height:1.7;color:#555}footer{text-align:center;color:#888;padding:50px 20px}@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:38px}.detail{grid-template-columns:1fr}.detail img{height:300px}}@media(max-width:500px){.grid{grid-template-columns:1fr}.nav{gap:12px}.hero{margin:15px}.cats,main>section:not(.hero){padding:0 15px}}
+/* AI Shopping Assistant */
+
+.chatButton {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 58px;
+  height: 58px;
+  border: none;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.chatButton:hover {
+  transform: translateY(-2px);
+}
+
+.chatBox {
+  position: fixed;
+  right: 24px;
+  bottom: 94px;
+  width: 360px;
+  height: 500px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #111;
+  color: white;
+}
+
+.chatHeader button {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 14px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatMessage {
+  max-width: 85%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  white-space: pre-line;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background: #111;
+  color: white;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: #222;
+}
+
+.chatInputArea {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid #ddd;
+}
+
+.chatInputArea input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+}
+
+.chatInputArea input:focus {
+  border-color: #111;
+}
+
+.chatInputArea button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+}
+
+.chatInputArea button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .chatBox {
+    right: 12px;
+    left: 12px;
+    bottom: 82px;
+    width: auto;
+    height: 70vh;
+  }
+
+  .chatButton {
+    right: 16px;
+    bottom: 16px;
+  }
+}
